@@ -70,5 +70,6 @@ function playGame(){
       }
 }
 
+//Run the Game
 playGame()
-
+//Finished!
