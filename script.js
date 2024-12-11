@@ -26,12 +26,10 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
-
-console.log(humanChoice)
-console.log(computerChoice)
-
+//Single Round game
+// Checking for Single Round
+// let humanChoice = getHumanChoice();
+// let computerChoice = getComputerChoice();
 function playRound(humanChoice,computerChoice){
     
     if(humanChoice===computerChoice){
@@ -49,7 +47,28 @@ function playRound(humanChoice,computerChoice){
     }
 
 }
+//End-Check for Single Round
+// console.log(playRound(humanChoice,computerChoice))
+// console.log(computerScore)
+// console.log(humanScore)
 
-console.log(playRound(humanChoice,computerChoice))
-console.log(computerScore)
-console.log(humanScore)
+//Five Round Game
+function playGame(){
+    for(let round = 1;round<=5;round++){
+        let humanChoice=getHumanChoice();
+        let computerChoice=getComputerChoice();
+
+        playRound(humanChoice,computerChoice);
+    }
+
+    if (humanScore > computerScore) {
+        console.log(`\nYou win the Game! Final score: You - ${humanScore}, Computer - ${computerScore}`);
+      } else if (computerScore > humanScore) {
+        console.log(`\nYou lose the Game! Final score: You - ${humanScore}, Computer - ${computerScore}`);
+      } else {
+        console.log(`\nIt's a tie Game! Final score: You - ${humanScore}, Computer - ${computerScore}`);
+      }
+}
+
+playGame()
+
