@@ -1,6 +1,9 @@
 # rockpaperscissor
-rock paper scissor console game!
-Pseudocode :
+
+[Here's the Publication](https://sukasukasoki.github.io/rockpaperscissor/)
+
+## rock paper scissor console game!
+## Pseudocode :
 Write a logic to get Computer Choice. -> computerChoice
     Since I'll be using Math.Random, which output between 0 and 1I'll be making a range :
     0-0.33 -> Rock
